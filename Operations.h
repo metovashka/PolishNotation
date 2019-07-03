@@ -22,7 +22,13 @@ public:
 
 };
 
+class Degree : public  Operation {
+public:
+    Degree (char s, int a) : Operation(s, a) {
+    };
 
+    int culculate(int, int) override;
+};
 class Plus : public Operation {
 public:
     Plus(char s, int a) : Operation(s, a) {

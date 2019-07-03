@@ -22,6 +22,14 @@ int Plus::culculate(int a, int b) {
     return a + b;
 }
 
+int Degree::culculate(int a, int b) {
+    int c = 1;
+    for (int i(0); i < b; i++) {
+        c *=a;
+    }
+    return c;
+}
+
 int Minus::culculate(int a, int b) {
     return a - b;
 }
@@ -37,6 +45,7 @@ int Div::culculate(int a, int b) {
 int Collection::add() {
 
     Collection.push_back(new Plus('+', 2));
+    Collection.push_back(new Degree('^', 2));
     Collection.push_back(new Minus('-', 2));
     Collection.push_back(new Multi('*', 3));
     Collection.push_back(new Div('/', 3));
